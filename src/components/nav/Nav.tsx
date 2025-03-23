@@ -12,14 +12,14 @@ export const Nav = () => {
       <div className="container">
         <div className="navbar-brand">
           <Link
-            to="#/"
+            to="/"
             className={cn('navbar-item', { 'is-active': pathname === '/' })}
           >
             Home
           </Link>
 
           <Link
-            to="#/tabs"
+            to="/tabs"
             className={cn('navbar-item', {
               'is-active': pathname.startsWith('/tabs'),
             })}
