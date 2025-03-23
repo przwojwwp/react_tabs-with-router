@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import cn from 'classnames';
 
 export const Nav = () => {
@@ -11,16 +11,20 @@ export const Nav = () => {
     >
       <div className="container">
         <div className="navbar-brand">
-          <a className={cn('navbar-item', { 'is-active': pathname === '/' })}>
-            <Link to="/">Home</Link>
+          <a
+            href="#/"
+            className={cn('navbar-item', { 'is-active': pathname === '/' })}
+          >
+            Home
           </a>
 
           <a
+            href="#/tabs"
             className={cn('navbar-item', {
               'is-active': pathname.startsWith('/tabs'),
             })}
           >
-            <Link to="/tabs">Tabs</Link>
+            Tabs
           </a>
         </div>
       </div>
